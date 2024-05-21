@@ -18,6 +18,10 @@
     {
       "id": "759d",
       "name": "Cream"
+    },
+    {
+      "id": "b67e",
+      "name": "Capsule"
     }
   ],
   "subcategory": [
@@ -474,6 +478,24 @@
       "pic1": "calpol1.jpeg",
       "pic2": "calpol2.webp",
       "pic3": "calpol3.webp",
+      "pic4": ""
+    },
+    {
+      "id": "1015",
+      "name": "Ab Flo Capsules",
+      "maincategory": "Capsule",
+      "subcategory": "Pills",
+      "brand": "Lupin",
+      "stock": "In Stock",
+      "color": "white&blue",
+      "size": "100mg",
+      "baseprice": 246,
+      "discount": 10,
+      "finalprice": 221,
+      "description": "This Product Quality is very good..",
+      "pic1": "abflo1.jpeg",
+      "pic2": "abflo2.jpeg",
+      "pic3": "abflo3.webp",
       "pic4": ""
     }
   ],

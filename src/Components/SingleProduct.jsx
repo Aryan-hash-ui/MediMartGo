@@ -135,7 +135,7 @@ navigate("/wishlist")
                 <tbody>
 
                   <tr >
-                    <th className='text-center fs-6 mb-1'>Category</th><td>{data.maincategory}/{data.subcategory}/</td>
+                    <th className='text-center fs-6 mb-1'>Category</th><td>{data.maincategory}/{data.subcategory}</td>
                   </tr>
                   <tr >
                     <th className='text-center fs-6 mb-1'>Brand</th><td>{data.brand}</td>
