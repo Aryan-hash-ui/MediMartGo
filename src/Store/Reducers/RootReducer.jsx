@@ -4,6 +4,11 @@ import { SubcategoryReducer } from "./SubcategoryReducers";
 import { BrandReducer } from "./BrandReducers";
 import { ProductReducer } from "./ProductReducers";
 import { TestimonialReducer } from "./TestimonialReducers";
+import { CartReducer } from "./CartReducers";
+import { NewsletterReducer } from "./NewsletterReducers";
+import { WishlistReducer } from "./WishlistReducers";
+import { ContactusReducer } from "./ContactusReducers";
+import { CheckoutReducer } from "./CheckoutReducers";
 
 
 export default combineReducers({
@@ -11,5 +16,10 @@ export default combineReducers({
     SubcategoryStateData: SubcategoryReducer,
     BrandStateData:BrandReducer,
     ProductStateData:ProductReducer,
-    TestimonialStateData:TestimonialReducer
+    TestimonialStateData:TestimonialReducer,
+    CartStateData:CartReducer,
+    NewsletterStateData:NewsletterReducer,
+    WishlistStateData:WishlistReducer,
+    ContactusStateData:ContactusReducer,
+    CheckoutStateData:CheckoutReducer
 })

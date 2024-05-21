@@ -4,16 +4,20 @@
       "id": "0"
     },
     {
-      "id": "245c",
-      "name": "Female"
+      "id": "9e70",
+      "name": "Tablet"
     },
     {
-      "id": "0ccf",
-      "name": "Male"
+      "id": "474e",
+      "name": "Syrup"
     },
     {
-      "id": "cbd6",
-      "name": "Kids"
+      "id": "255c",
+      "name": "Surgical"
+    },
+    {
+      "id": "759d",
+      "name": "Cream"
     }
   ],
   "subcategory": [
@@ -21,20 +25,20 @@
       "id": "0"
     },
     {
-      "name": "Trouser",
-      "id": "1"
+      "id": "7acc",
+      "name": "Lotion"
     },
     {
-      "name": "Shirt",
-      "id": "2"
+      "id": "cc68",
+      "name": "Body Wash"
     },
     {
-      "name": "Tshirt",
-      "id": "3"
+      "id": "8925",
+      "name": "Drops"
     },
     {
-      "id": "4",
-      "name": "Jeans"
+      "id": "f161",
+      "name": "Pills"
     }
   ],
   "brand": [
@@ -42,36 +46,52 @@
       "id": "0"
     },
     {
-      "name": "Tommy Hilfiger",
-      "id": "1"
+      "id": "e56f",
+      "name": "Lupin"
     },
     {
-      "name": "Zara",
-      "id": "3"
+      "id": "162f",
+      "name": "Cadil"
     },
     {
-      "name": "Nike",
-      "id": "4"
+      "id": "3fea",
+      "name": "Cipla"
     },
     {
-      "name": "Polo",
-      "id": "5"
+      "id": "b75e",
+      "name": "Intas"
     },
     {
-      "name": "Cobb",
-      "id": "6"
+      "id": "0d54",
+      "name": "Alkem"
     },
     {
-      "name": "Mufti",
-      "id": "7"
+      "id": "697b",
+      "name": "Sun P"
     },
     {
-      "name": "Adidas",
-      "id": "8"
+      "id": "53a2",
+      "name": "Torre"
     },
     {
-      "id": "6523",
-      "name": "RedTape"
+      "id": "1e4a",
+      "name": "Arist"
+    },
+    {
+      "id": "5cf9",
+      "name": "Micro"
+    },
+    {
+      "id": "d0fd",
+      "name": "Glenm"
+    },
+    {
+      "id": "75b1",
+      "name": "Manki"
+    },
+    {
+      "id": "0168",
+      "name": "GSk"
     }
   ],
   "product": [
@@ -437,6 +457,24 @@
       "pic2": "",
       "pic3": "",
       "pic4": "p6.jpg"
+    },
+    {
+      "id": "3fef",
+      "name": "Calpol",
+      "maincategory": "Tablet",
+      "subcategory": "Pills",
+      "brand": "GSk",
+      "stock": "In Stock",
+      "color": "White",
+      "size": "500mg",
+      "baseprice": 20,
+      "discount": 20,
+      "finalprice": 16,
+      "description": "This Product Quality is very good..",
+      "pic1": "calpol1.jpeg",
+      "pic2": "calpol2.webp",
+      "pic3": "calpol3.webp",
+      "pic4": ""
     }
   ],
   "user": [
@@ -456,20 +494,6 @@
       "city": "Delhi",
       "state": "Delhi",
       "pin": "2088845"
-    },
-    {
-      "name": "Shyam Kumar",
-      "username": "Shyam",
-      "email": "shyam@gmail.com",
-      "phone": "9873848048",
-      "password": "Shyam@123",
-      "role": "Admin",
-      "address": "",
-      "pin": "",
-      "city": "",
-      "state": "",
-      "pic": "p2.jpg",
-      "id": "4"
     },
     {
       "id": "47a9",
@@ -498,6 +522,20 @@
       "city": "Chandni Chowk",
       "state": "Delhi",
       "pic": "p6.jpg"
+    },
+    {
+      "id": "80da",
+      "name": "Aryan",
+      "username": "Raftaar",
+      "email": "aryangupta1904@gmail.com",
+      "phone": "8708515235",
+      "password": "8860",
+      "role": "Admin",
+      "address": "D-14,Bhisanpura Village",
+      "pin": "201301",
+      "city": "Noida",
+      "state": "Uttar Pradesh",
+      "pic": "DSC_0375.JPG"
     }
   ],
   "cart": [
@@ -529,6 +567,15 @@
       "total": 2500,
       "pic": "p43.jpg",
       "id": "2"
+    },
+    {
+      "id": "5eb9",
+      "userid": "80da",
+      "productid": "3fef",
+      "name": "Calpol",
+      "brand": "GSk",
+      "color": "White",
+      "size": "500mg"
     }
   ],
   "wishlist": [

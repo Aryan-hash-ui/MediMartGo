@@ -34,7 +34,7 @@ export default function AdminHome() {
                             <div className='col-md-6'>
                                 {
                                     user.pic ?
-                                        <img src={`/products/${user.pic}`} height="380px" width="100%" alt="" /> :
+                                        <img src={`/img/${user.pic}`} height="380px" width="100%" alt="" /> :
                                         <img src={`/img/nouser.jpg`} height="380px" width="100%" alt="" />
                                 }
                             </div>

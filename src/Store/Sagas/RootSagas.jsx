@@ -4,6 +4,11 @@ import SubcategorySagas from "./SubcategorySagas";
 import BrandSagas from "./BrandSagas";
 import ProductSagas from "./ProductSagas";
 import TestimonialSagas from "./TestimonialSagas";
+import CartSagas from "./CartSagas";
+import CheckoutSagas from "./CheckoutSagas";
+import NewsletterSagas from "./NewsletterSagas";
+import ContactusSagas from "./ContactusSagas";
+import WishlistSagas from "./WishlistSagas";
 
 
 export default function* RootSagas(){
@@ -12,7 +17,12 @@ export default function* RootSagas(){
         SubcategorySagas(),
         BrandSagas(),
         ProductSagas(),
-        TestimonialSagas()
+        TestimonialSagas(),
+        CartSagas(),
+        CheckoutSagas(),
+        NewsletterSagas(),
+        ContactusSagas(),
+        WishlistSagas()
 
     ])
 }

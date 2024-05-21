@@ -4,6 +4,8 @@ import { useDispatch, useSelector } from 'react-redux'
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
+import { addCart,getCart } from '../Store/ActionCreators/CartActionCreators';
+import {addWishlist,getWishlist} from '../Store/ActionCreators/WishlistActionCreators'
 import { Link, useNavigate, useParams } from 'react-router-dom'
 export default function SingleProduct() {
   let [data, setData] = useState({
@@ -17,9 +19,54 @@ export default function SingleProduct() {
   let [relatedproducts, setRelatedProducts] = useState([])
   let [qty, setQty] = useState(1)
   let dispatch = useDispatch()
+  let CartStateData=useSelector((state)=>state.CartStateData)
+  let WishlistStateData=useSelector((state)=>state.WishlistStateData)
   let ProductStateData = useSelector((state) => state.ProductStateData)
   let navigate = useNavigate()
   let { id } = useParams()
+function addToCart()
+{
+  var item=CartStateData.slice(1).find((x)=>x.userid=localStorage.getItem("userid") && (x.productid===id))
+  if(item)
+    navigate("/cart")
+  else
+  item={
+userid:localStorage.getItem("userid"),
+productid:id,
+name:data.name,
+brand:data.brand,
+color:data.color,
+size:data.size,
+price:data.price,
+total:data.total,
+pic:data.pic,
+qty:data.qty
+}
+dispatch(addCart(item))
+navigate("/cart")
+}
+
+function addToWishlist()
+{
+  var item=WishlistStateData.slice(1).find((x)=>x.userid=localStorage.getItem("userid") && (x.productid===id))
+  if(item)
+    navigate("/wishlist")
+  else
+  item={
+userid:localStorage.getItem("userid"),
+productid:id,
+brand:data.brand,
+color:data.color,
+size:data.size,
+price:data.price,
+pic:data.pic
+
+}
+dispatch(item)
+navigate("/wishlist")
+}
+
+
 
   function getAPIData() {
     dispatch(getProduct())
@@ -107,7 +154,7 @@ export default function SingleProduct() {
                     <th className='text-center fs-6 mb-1'>Description</th><td>{data.description}</td>
                   </tr>
                   <tr>
-                    <th colspan="2">
+                    <th colSpan="2">
                       <div className='d-flex'>
                         <button className="w-25" onClick={() => {
                           if (qty > 1)
@@ -121,8 +168,8 @@ export default function SingleProduct() {
                   </tr>
                   <tr>
                     <td colSpan={2}>
-                      <button className='btn btn-primary w-50'><i className='fa fa-shopping-cart'></i> Add to Cart</button>
-                      <button className='btn btn-success w-50'><i className='fa fa-heart'></i> Add to Wishlist</button>
+                      <button className='btn btn-primary w-50' onClick={addToCart}><i className='fa fa-shopping-cart' ></i> Add to Cart</button>
+                      <button className='btn btn-success w-50' onClick={addToWishlist}><i className='fa fa-heart' ></i> Add to Wishlist</button>
                     </td>
                   </tr>
                 </tbody>
