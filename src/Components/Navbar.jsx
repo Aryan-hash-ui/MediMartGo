@@ -1,12 +1,13 @@
 import React from 'react'
 import { Link,useNavigate } from 'react-router-dom'
 export default function Navbar() {
+  
   let navigate=useNavigate()
     function logout() {
         localStorage.clear()
         navigate("/login")
     }
-
+   
 
 
     return (
@@ -90,6 +91,7 @@ export default function Navbar() {
           Contact Us
         </Link>
       </div>
+     
        {/* localStorage and sessionStorage are almost identical and have the same API. The difference is that with sessionStorage , the data is persisted only until the window or tab is closed. With localStorage , the data is persisted until the user manually clears the browser cache or until your web app clears the data. */}
        {
                         localStorage.getItem("login") ?

@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom'
 
 export default function Shop() {
     let [maincategory, setMaincategory] = useState([])
-  
+
     let [subcategory, setSubcategory] = useState([])
     let [brand, setBrand] = useState([])
     let [product, setProduct] = useState([])
@@ -79,7 +79,7 @@ export default function Shop() {
     }
     function postSearch(e) {
         e.preventDefault()
-        setProduct(ProductStateData.slice(1).reverse().filter((x) => x.name.toLowerCase().includes(search) || x.maincategory.toLowerCase() === search || x.subcategory.toLowerCase() === search || x.brand.toLowerCase() === search || x.color.toLowerCase() === search || x.size.toLowerCase() === search ))
+        setProduct(ProductStateData.slice(1).reverse().filter((x) => x.name.toLowerCase().includes(search) || x.maincategory.toLowerCase() === search || x.subcategory.toLowerCase() === search || x.brand.toLowerCase() === search || x.color.toLowerCase() === search || x.size.toLowerCase() === search))
     }
 
     function getAPIData() {
@@ -172,16 +172,16 @@ export default function Shop() {
                     <div className='col-md-10'>
 
                         {/* <!-- Products --> */}
-                  
-                            <div className='row'>
-                                <div className='col-md-9 '>
-                                    <form className='form-control btn-group' onSubmit={postSearch}>
-                                        <input type="search" className=' form-control' placeholder='Enter MainCategory,SubCategory,Brand,Color,Size etc. to search' name='search' onChange={(e) => setSearch(e.target.value.toLowerCase())} />
 
-                                        <button type="submit" className=' form-control btn btn-primary text-dark'>Search</button>
-                                    </form>
-                                </div>
-                            
+                        <div className='row'>
+                            <div className='col-md-9 '>
+                                <form className='form-control btn-group' onSubmit={postSearch}>
+                                    <input type="search" className=' form-control' placeholder='Enter MainCategory,SubCategory,Brand,Color,Size etc. to search' name='search' onChange={(e) => setSearch(e.target.value.toLowerCase())} />
+
+                                    <button type="submit" className=' form-control btn btn-primary text-dark'>Search</button>
+                                </form>
+                            </div>
+
                             <div className="col-md-3 mb-3">
                                 <select name="sortFilter" onChange={getSearch} className='form-control'>
                                     <option value="1">Latest</option>
@@ -207,10 +207,11 @@ export default function Shop() {
 
                                                 </div>
                                             </div>
-                                            <div className="bg-light text-center p-4">
-                                                <h5 className="fw-bold mb-0">{item.name}</h5>
+                                            <Link to={`/singleproduct/${item.id}`}><div className="bg-dark border-inner text-center p-4">
+                                                <h4 className="text-uppercase text-success">{item.name}</h4>
                                                 <small><del className='text-danger'>&#8377; {item.baseprice}</del>  &#8377; {item.finalprice}</small>
                                             </div>
+                                            </Link>
                                         </div>
                                     </div>
 

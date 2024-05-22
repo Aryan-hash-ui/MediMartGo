@@ -14,7 +14,7 @@ export default function Home() {
   function getAPIData() {
     dispatch(getProduct())
     if (ProductStateData.length) {
-      setData(ProductStateData.slice(1).reverse().slice(0, 8))
+      setData(ProductStateData.slice(1).reverse().slice(0, 15))
     }
   }
   useEffect(() => {
@@ -98,13 +98,13 @@ export default function Home() {
               className="section-title position-relative text-center mx-auto mb-5 pb-3"
               style={{ maxWidth: 600 }}
             >
-              <h2 className="text-primary font-secondary">Team Members</h2>
-              <h1 className="display-4 text-uppercase">Our Master Chefs</h1>
+              <h2 className="text-primary font-secondary">Medicines</h2>
+              <h1 className="display-4 text-uppercase">Our Products</h1>
             </div>
             <div className="row g-5">
               {
                 data.map((item, index) => {
-                  return <div className="col-lg-3 col-md-6" key={index}>
+                  return <div className="col-lg-4 col-md-6" key={index}>
                     <div className="team-item">
                       <div className="position-relative overflow-hidden">
                         <img className="img-fluid w-100" src={`products/${item.pic1}`}  alt=""  style={{"width":"100%","height":"200px"}} />

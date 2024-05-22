@@ -96,6 +96,50 @@
     {
       "id": "0168",
       "name": "GSk"
+    },
+    {
+      "id": "2243",
+      "name": "Dr. R."
+    },
+    {
+      "id": "2f2c",
+      "name": "Ipca"
+    },
+    {
+      "id": "557f",
+      "name": "Servi"
+    },
+    {
+      "id": "4abd",
+      "name": "Troik"
+    },
+    {
+      "id": "790f",
+      "name": "Eris"
+    },
+    {
+      "id": "02c6",
+      "name": "Proct"
+    },
+    {
+      "id": "017f",
+      "name": "Pfize"
+    },
+    {
+      "id": "9f29",
+      "name": "Macle"
+    },
+    {
+      "id": "5b9f",
+      "name": "Apric"
+    },
+    {
+      "id": "48c1",
+      "name": "Systo"
+    },
+    {
+      "id": "210b",
+      "name": "Ajant"
     }
   ],
   "product": [
@@ -497,6 +541,42 @@
       "pic2": "abflo2.jpeg",
       "pic3": "abflo3.webp",
       "pic4": ""
+    },
+    {
+      "id": "5a8e",
+      "name": "Bisot 5mg Tablet",
+      "maincategory": "Tablet",
+      "subcategory": "Pills",
+      "brand": "Micro",
+      "stock": "In Stock",
+      "color": "White",
+      "size": "5mg",
+      "baseprice": 132,
+      "discount": 10,
+      "finalprice": 119,
+      "description": "This Product Quality is very good..",
+      "pic1": "bisot1.webp",
+      "pic2": "bisot2.webp",
+      "pic3": "bisot4.jpg",
+      "pic4": ""
+    },
+    {
+      "id": "f479",
+      "name": "Cetzine",
+      "maincategory": "Tablet",
+      "subcategory": "Pills",
+      "brand": "Dr. R.",
+      "stock": "In Stock",
+      "color": "White",
+      "size": "10m",
+      "baseprice": 31,
+      "discount": 10,
+      "finalprice": 28,
+      "description": "This Product Quality is very good..",
+      "pic1": "cetzine1.webp",
+      "pic2": "cetzine2.jpg",
+      "pic3": "cetzine3.webp",
+      "pic4": "cetzine4.jpg"
     }
   ],
   "user": [
@@ -598,6 +678,15 @@
       "brand": "GSk",
       "color": "White",
       "size": "500mg"
+    },
+    {
+      "id": "4a08",
+      "userid": "80da",
+      "productid": "f479",
+      "name": "Cetzine",
+      "brand": "Dr. R.",
+      "color": "White",
+      "size": "10m"
     }
   ],
   "wishlist": [
