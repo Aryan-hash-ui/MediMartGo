@@ -1,4 +1,4 @@
-not import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import { getProduct } from '../Store/ActionCreators/ProductActionCreators'
 import { useDispatch, useSelector } from 'react-redux'
 import OwlCarousel from 'react-owl-carousel';
