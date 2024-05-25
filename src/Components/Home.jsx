@@ -110,6 +110,7 @@ export default function Home() {
                         <img className="img-fluid w-100" src={`products/${item.pic1}`}  alt=""  style={{"width":"100%","height":"200px"}} />
                         <div className="team-overlay w-100 h-100 position-absolute top-50 start-50 translate-middle d-flex align-items-center justify-content-center">
                           <div className="d-flex align-items-center justify-content-start">
+                          <img className="img-fluid team-overlay position-absolute start-0 top-0 w-100 h-100" src={`products/${item.pic2}`}  alt=""  style={{"width":"100%","height":"200px"}}/>
                            
                             <Link
                               className="btn btn-lg btn-success btn-lg-square border-inner rounded-0 mx-1"
