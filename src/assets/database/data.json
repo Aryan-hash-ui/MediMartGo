@@ -577,6 +577,78 @@
       "pic2": "cetzine2.jpg",
       "pic3": "cetzine3.webp",
       "pic4": "cetzine4.jpg"
+    },
+    {
+      "id": "3176",
+      "name": "Folvite 45 Tablets",
+      "maincategory": "Tablet",
+      "subcategory": "Pills",
+      "brand": "Pfize",
+      "stock": "In Stock",
+      "color": "White",
+      "size": "10mg",
+      "baseprice": 76,
+      "discount": 8,
+      "finalprice": 70,
+      "description": "This Product Quality is very good..",
+      "pic1": "folvite1.jpeg",
+      "pic2": "folvite2.webp",
+      "pic3": "folvite3.webp",
+      "pic4": "folvite4.jpg"
+    },
+    {
+      "id": "8236",
+      "name": "Evion Lc Tablet",
+      "maincategory": "Tablet",
+      "subcategory": "Pills",
+      "brand": "Proct",
+      "stock": "In Stock",
+      "color": "Light Green",
+      "size": "200mg",
+      "baseprice": 62,
+      "discount": 10,
+      "finalprice": 56,
+      "description": "This Product Quality is very good..",
+      "pic1": "evionlc1.webp",
+      "pic2": "evionlc2.jpg",
+      "pic3": "evionlc3.jpg",
+      "pic4": "evionlc4.jpg"
+    },
+    {
+      "id": "9042",
+      "name": "Monit GTN 6.4mg Tablet",
+      "maincategory": "Tablet",
+      "subcategory": "Pills",
+      "brand": "Intas",
+      "stock": "In Stock",
+      "color": "White",
+      "size": "6.4mg",
+      "baseprice": 311,
+      "discount": 10,
+      "finalprice": 280,
+      "description": "This Product Quality is very good..",
+      "pic1": "monit1.webp",
+      "pic2": "monit2.jpg",
+      "pic3": "monit3.webp",
+      "pic4": ""
+    },
+    {
+      "id": "f71f",
+      "name": "Dynpar 15 Tablets",
+      "maincategory": "Tablet",
+      "subcategory": "Pills",
+      "brand": "Troik",
+      "stock": "In Stock",
+      "color": "Sky blue",
+      "size": "500",
+      "baseprice": 115,
+      "discount": 8,
+      "finalprice": 106,
+      "description": "This Product Quality is very good..",
+      "pic1": "dynpar1.webp",
+      "pic2": "dynpar2.webp",
+      "pic3": "dynpar3.html",
+      "pic4": ""
     }
   ],
   "user": [
@@ -671,22 +743,31 @@
       "id": "2"
     },
     {
-      "id": "5eb9",
+      "id": "35b4",
       "userid": "80da",
-      "productid": "3fef",
-      "name": "Calpol",
-      "brand": "GSk",
+      "productid": "9042",
+      "name": "Monit GTN 6.4mg Tablet",
+      "brand": "Intas",
       "color": "White",
-      "size": "500mg"
+      "size": "6.4mg"
     },
     {
-      "id": "4a08",
+      "id": "f313",
       "userid": "80da",
-      "productid": "f479",
-      "name": "Cetzine",
-      "brand": "Dr. R.",
+      "productid": "f71f",
+      "name": "Dynpar 15 Tablets",
+      "brand": "Troik",
+      "color": "Sky blue",
+      "size": "500"
+    },
+    {
+      "id": "50b6",
+      "userid": "80da",
+      "productid": "3176",
+      "name": "Folvite 45 Tablets",
+      "brand": "Pfize",
       "color": "White",
-      "size": "10m"
+      "size": "10mg"
     }
   ],
   "wishlist": [

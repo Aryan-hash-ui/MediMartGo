@@ -18,6 +18,7 @@ export default function Shop() {
     let [min, setMin] = useState(0)
     let [max, setMax] = useState(1000)
     let [search, setSearch] = useState("")
+    let [flag,setFlag]=useState(true)
 
     let dispatch = useDispatch()
     let MainCategoryStateData = useSelector((state) => state.MaincategoryStateData)
@@ -197,18 +198,23 @@ export default function Shop() {
                                 product.map((item, index) => {
                                     return <div key={index} className="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
 
-                                        <div className="team-item" >
+                                        <div className="team-item">
                                             <div className="position-relative overflow-hidden">
-                                                <img className="img-fluid" src={`products/${item.pic1}`} alt="" style={{ "width": "100%", "height": "200px" }} />
-                                                <div className="team-overlay position-absolute start-0 top-0 w-100 h-100 " >
-                                                    <img className="img-fluid team-overlay position-absolute start-0 top-0 w-100 h-100" src={`products/${item.pic2}`} alt="" style={{ "width": "100%", "height": "200px" }} />
+                                                <img className="img-fluid w-100" src={`products/${item.pic1}`} alt="" style={{ "width": "100%", "height": "200px" }} />
+                                                <div className="team-overlay w-100 h-100 position-absolute top-50 start-50 translate-middle d-flex align-items-center justify-content-center">
+                                                    <div className="d-flex align-items-center justify-content-start">
 
-                                                    <Link className="btn btn-square mx-1 text-light position-absolute bg-primary w-100" to={`/singleproduct/${item.id}`}><i className="fa fa-shopping-cart"></i>&emsp; Add to Cart</Link>
-
+                                                        <Link
+                                                            className="btn btn-lg btn-success btn-lg-square border-inner rounded-0 mx-1"
+                                                            to={`/singleproduct/${item.id}`}
+                                                        >
+                                                            <i className="fa fa-shopping-cart" />
+                                                        </Link>
+                                                    </div>
                                                 </div>
                                             </div>
                                             <Link to={`/singleproduct/${item.id}`}><div className="bg-dark border-inner text-center p-4">
-                                                <h4 className="text-uppercase text-success">{item.name}</h4>
+                                                <h4 className="text-uppercase text-primary">{item.name}</h4>
                                                 <small><del className='text-danger'>&#8377; {item.baseprice}</del>  &#8377; {item.finalprice}</small>
                                             </div>
                                             </Link>

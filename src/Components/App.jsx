@@ -29,6 +29,7 @@ import Signup from "./Signup"
 import SingleProduct from "./SingleProduct"
 import Profile from './Profile'
 import UpdateProfile from './UpdateProfile'
+import Cart from './Cart'
 export default function App() {
   return (
     <>
@@ -66,6 +67,7 @@ export default function App() {
           <Route path='/singleproduct/:id' element={<SingleProduct/>}/>
           <Route path="/profile" element={<Profile/>}/>
           <Route path="/updateprofile" element={<UpdateProfile/>}/>
+          <Route path="/cart" element={<Cart/>}/>
         </Routes>
         <Footer />
       </BrowserRouter>

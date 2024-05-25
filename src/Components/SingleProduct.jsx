@@ -4,8 +4,8 @@ import { useDispatch, useSelector } from 'react-redux'
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
-import { addCart,getCart } from '../Store/ActionCreators/CartActionCreators';
-import {addWishlist,getWishlist} from '../Store/ActionCreators/WishlistActionCreators'
+import { addCart } from '../Store/ActionCreators/CartActionCreators';
+import {addWishlist} from '../Store/ActionCreators/WishlistActionCreators'
 import { Link, useNavigate, useParams } from 'react-router-dom'
 export default function SingleProduct() {
   let [data, setData] = useState({
@@ -30,6 +30,7 @@ function addToCart()
   if(item)
     navigate("/cart")
   else
+  {
   item={
 userid:localStorage.getItem("userid"),
 productid:id,
@@ -44,27 +45,31 @@ qty:data.qty
 }
 dispatch(addCart(item))
 navigate("/cart")
+  }
 }
 
 function addToWishlist()
 {
   var item=WishlistStateData.slice(1).find((x)=>x.userid=localStorage.getItem("userid") && (x.productid===id))
   if(item)
-    navigate("/wishlist")
+    navigate("/profile")
   else
+  {
+  
   item={
 userid:localStorage.getItem("userid"),
 productid:id,
+name:data.name,
 brand:data.brand,
 color:data.color,
 size:data.size,
 price:data.price,
 pic:data.pic
+}
+dispatch(addWishlist(item))
+navigate("/profile")
 
-}
-dispatch(item)
-navigate("/wishlist")
-}
+}}
 
 
 
@@ -135,7 +140,7 @@ navigate("/wishlist")
                 <tbody>
 
                   <tr >
-                    <th className='text-center fs-6 mb-1'>Category</th><td>{data.maincategory}/{data.subcategory}</td>
+                    <th className='text-center fs-6 mb-1'>Category</th><td>{data.maincategory}/{data.subcategory}/</td>
                   </tr>
                   <tr >
                     <th className='text-center fs-6 mb-1'>Brand</th><td>{data.brand}</td>
