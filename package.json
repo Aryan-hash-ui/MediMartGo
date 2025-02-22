@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "react-data-table-component": "^7.6.2",
+    "usestate": "^1.1.3"
+  }
+}

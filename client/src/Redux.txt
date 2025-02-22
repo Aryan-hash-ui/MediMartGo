@@ -1,0 +1,160 @@
+
+npm i @reduxjs/toolkit
+npm i react-redux
+npm i redux-saga
+___________________________________________
+Redux is a predictable state container for javascript application either in react/angular
+
+As the  application grows ,it becomes difficult to keep it organize and maintain data flow
+Redux solve this problem by managing application's state with a single global object called store. 
+Redux fundamental principals helps in maintaining consistancy throughout your applications which makes dubugging and testing easier
+
+Principals of Redux-
+
+Redux determined by 3 most important principals
+
+1)Single source of truth- The state of your whole application is stored in an object tree within a single store.
+
+2)State is read only- The only way to( dispatch the action)change the state is to emit an action and object describing what happened. This means nobody can directly change the state.
+The only way to change the state is to use reducers 
+
+3)Changes are made with pure functions-To specify how the state tree is transformed by action,we have to write Pure functions(reducers) . Pure functions are those which will not change the value of parameters received by it. Reducer will not change the state directly but replace it
+A reducer is a central place where state modification takes place
+_____________________________________________________
+Redux Data Flow-
+
+1)An action is dispatched when user interacts with the application
+2)Root Reducer function is called with the current state and the dispatched action.Then Root Reducer fn. may divide the task among the smaller reducer.
+Then small reducer functions return the new state
+3)Store notifies the view(User Interface) by executing their callback functions
+4)View can retrieve updated state and re-render again
+
+Store- A store is an immutable object tree in redux.
+A store is a state container which holds the global state of the application.
+One redux application can have a single store in your application.
+
+Action-Actions are the only source of information for the store it carries type of action and a payload of information. It is basically a plain js object. It tells us what had happened.
+
+Action Creators- Action creators are basically the functions that encapsulate the process of creation of an action object. These functions simply return an action object
+___________________________________
+REDUCER:
+
+Reducer is a pure function in Redux . Pure functions are predictable . Reducers are the only way to change the state .they are used to return a new state from the initial state.
+  It reads the payloads from the actions. The reducer then updates the store via the state accordingly. Reducers are the only place we can write the logic and perform calculations. Reducer function will accept the previous state and the action being dispatched.,Calculate the next state and return the new object which replace previous state. 
+The following few things sholud never be used by reducer
+1)Mutation of function arguments eg. state and action
+2) Never call API and routing logic in reducer(means navigate bcoz it will break the chain)
+Note:-Redux data flow is sync and do all actions in a sequence and calling API is Async 
+3)Never call non pure functions(whose result can't be predicted) eg. math.random is a non-predictable function
+___________________
+Pure Function- A function is called Pure if it follows the following rules
+1)If function returns same result for same arguments eg. not in case of math.random
+2)if its evaluation has no side effects ie. it does not change input data .Although can create new object but no change directly
+3)No mutation of local and global variables
+4)If it does not depend on actional state
+_____________________	
+Redux-Saga
+
+
+Middleware-Redux is syncronous so we cannot perform async operation in redux directly like network request and cannot call any API. 
+So to solve this problem, we have to use Middlewares like Thunk or Saga.
+
+Redux-Saga makes things easier with the ability to test. An essential task of a frontend developer is managing how data flows from the backend to the frontend. This includes managing the present state, sharing data between components and trying not to repeat the process of fetching the same data twice.
+
+
+Reducers- Reducers are the pure functions in redux
+Redux-Middleware functions provide a medium to intract with the dispatched action before they reach to the reducer.
+Customized Middleware functions can be created by writing high order functions which wraps around some logic. Multiple middlewares can be combined together to add a new functionality.
+Basically, Middlewares are use to deal with async operations in our application
+Redux provides an API applyMiddlewares which allows us to use custom middleware as well as Redux -Thunk,  Redux-Promise and Redux-Saga
+____________________
+Redux Saga is a middleware library used to allow a Redux store to interact with resources outside of itself asynchronously. This includes making HTTP requests to external services, accessing browser storage, and executing I/O operations.
+
+
+
+
+________________________________________________________________________________________________________________
+
+				Same as Above for Redux
+
+_________________________________________________________________________________________________________
+Redux is an open-source JavaScript library which was first introduced in 2015 by Dan Abramov and Andrew Clark in 2015. 
+Redux is used by ReactJS for building the user interface and to manage the application state. The official React binding for Redux is React Redux which is used to read data from a Redux Store, and dispatch Actions to the Store to update data. It also helps the apps to scale. The workflow of React Redux can be simply understood as:
+
+subscribes to the Redux store.
+check to see if the data needed by the component have changed.
+re-render the component.
+ 
+
+Importance of React Redux:
+
+Being the official UI bindings for React Application, it is always kept up-to-date with any API changes.
+
+Good ‘React’ architecture is encouraged by React Redux.
+Many performance optimizations are implemented internally, to re-render components only when needed.
+ 
+
+___________________________________________________
+
+ 
+
+Redux Architecture:(Redux Data-flow)
+
+There are three main components of Redux architecture.
+
+STORE:
+
+The entire state of an application lists at a place called Store. It acts as a brain and manages the status of the application. It also has a dispatch(action) function.
+
+ACTION:
+
+An action is a pure object which is sent or dispatched when a user interacts with the application.  It is created to store information about the user’s event such as info about the type of action, the time of occurrence, the location of occurrence, info about its coordinates, and info about the state it aims to change.
+
+REDUCER:
+
+Reducer is a pure function in Redux . Pure functions are predictable . Reducers are the only way to change the state .theyare used to return a new state from the initial state.
+  It reads the payloads from the actions. The reducer then updates the store via the state accordingly. Reducers are the only place we can write the logic and perform calculations. Reducer function will accept the previous state and the action being dispatched.,Calculate the next state and return the new object which replace previous state. 
+The following few things sholud never be used by reducer
+1)Mutation of function arguments eg. state and action
+2) Never call API and routing logic in reducer(means navigate bcoz it will break the chain)
+Note:-Redux data flow is sync and do all actions in a sequence and calling API is Async 
+3)Never call non pure functions(whose result can't be predicted) eg. math.random is a non-predictable function
+__________________________________________
+ 
+Redux is a pattern and library for managing and updating application state using events called actions. It serves  as a centralized store that needs to be used across your entire application with rules ensuring that the state can only be updated in a predictable fashion.
+
+1. Action ---- Pure Object
+Actions are the only source of information for the store.It carries type of action and the payload of information. It is basically a plain javascript object which tells what had happened
+
+Actions are plain JS objects that have a type field. Actions only tell what to do, but they don't tell how to do.
+
+return
+{
+type:'Increment'
+payload:num
+}
+
+Action Creators- They are basically the function that encapsulate the process of creation of an action object.
+These function simply returns the action of an object
+
+2. Reducer----
+The Root reducer is called with the current state and the dispatched action. then the root reducer may divide the task amongest small reducer functions. Then smaller reducer function return the new state
+Reducers are functions that take the current state and an action as an arguments and return a new state result.
+eg. Juicer----handle rotate--action
+	Juicer machine---reducer
+	juice---new state
+
+ Store notifies the view(UI) by executing their callback functions.
+View can retrieve the updated state and re-render again
+3. Store-  A store is an immutable object tree in redux. A store is a state container which holds the global state of the application. One Redux application can have an single store application.
+
+The Redux store brings together  the state, actions and reducers that make up your app
+It's important to note that you will only have a single store in a Redux.
+Every Redux store has a single root reducer function.
+
+import {createStore} from "redux";
+const store = createStore(rootReducer);
+
+_______________________________
+__________________________________
+
