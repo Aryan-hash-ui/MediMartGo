@@ -8284,7 +8284,7 @@ fieldset:disabled .btn {
 }
 
 .text-primary {
-    color: #11a2d7 !important
+    color: blue !important
 }
 
 .text-secondary {
@@ -8364,7 +8364,7 @@ fieldset:disabled .btn {
 }
 
 .bg-light {
-    background-color: #11a2d7 !important
+    background-color: #fff !important
 }
 
 .bg-dark {

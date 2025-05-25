@@ -14,7 +14,7 @@ export default function Navbar() {
     <>
 
       {/* <!-- Topbar Start --> */}
-      <div className="container-fluid text-light bg-success p-0">
+      {/* <div className="container-fluid text-light bg-light p-0">
         <div className="row gx-0 d-none d-lg-flex">
           <div className="col-lg-6 px-5 text-start">
             <div className="h-100 d-inline-flex align-items-center py-3 me-4">
@@ -41,11 +41,11 @@ export default function Navbar() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
       {/* <!-- Topbar End --> */}
 
       {/* Navbar Start */}
-      <nav className="navbar navbar-expand-lg bg-light text-dark navbar-dark shadow-sm py-3 py-lg-0  h-25 px-3 px-lg-0">
+      <nav className="navbar navbar-expand-lg bg-light text-primary navbar-dark shadow-sm px-3 px-lg-0">
         <Link to="/" className="navbar-brand d-block d-lg-none">
           <h1 className="m-0 text-uppercase text-white">
             <i className="fa fa-plus fs-1  me-3" />
@@ -60,7 +60,7 @@ export default function Navbar() {
         >
           <span className="navbar-toggler-icon" />
         </button>
-        <div className="collapse navbar-collapse text-dark" id="navbarCollapse">
+        <div className="collapse navbar-collapse text-primary" id="navbarCollapse">
           <div className="col-lg-4 text-center text-dark border-inner py-3 mx-0">
             <div className="d-inline-flex align-items-center justify-content-center">
               <Link to="/" className="navbar-brand">
@@ -71,16 +71,16 @@ export default function Navbar() {
               </Link>
             </div>
           </div>
-          <div className="navbar-nav ms-auto  text-dark mx-lg-auto py-0">
-            <Link to="/" className="nav-item text-dark nav-link active">Home</Link>
-            <Link to="/about" className="nav-item text-dark nav-link">About Us</Link>
-            <Link to="/shop" className="nav-item text-dark nav-link">Shop</Link>
+          <div className="navbar-nav ms-auto  text-primary mx-lg-auto py-0">
+            <Link to="/" className="nav-item text-primary nav-link active">Home</Link>
+            <Link to="/about" className="nav-item text-primary nav-link">About Us</Link>
+            <Link to="/shop" className="nav-item text-primary nav-link">Shop</Link>
             {
               localStorage.getItem('role') === 'Admin' ?
-                <Link to="/admin" className="nav-item  text-dark nav-link">Admin</Link> : ""
+                <Link to="/admin" className="nav-item  text-primary nav-link">Admin</Link> : ""
 
             }
-            <Link to="/contact" className="nav-item  text-dark nav-link">Contact Us</Link>
+            <Link to="/contact" className="nav-item  text-primary nav-link">Contact Us</Link>
           </div>
           <Link to="/cart" className="nav-item nav-link">
             <i className='fa fa-bold fa-shopping-cart'></i>
